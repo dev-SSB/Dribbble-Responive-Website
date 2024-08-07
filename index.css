@@ -1,0 +1,515 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    /* background-color: #F8F7F4; */
+    font-family: 'Source Serif 4';
+}
+
+
+#main{
+    /*  */
+    /* background-color: antiquewhite; */
+    height: 100%;
+    width: 100%;
+}
+
+
+
+
+#nav{
+    /*  */
+    /* background-color: burlywood; */
+    height: 6vw;
+    width: 100%;
+
+    padding: 0 3vw;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#nav #nav-part1{
+    /*  */
+    /* background-color: red; */
+    width: 30%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#nav #nav-part1 h4{
+    font-size: 0.9vw;
+    font-weight: 600;
+}
+#nav #nav-part2{
+    /*  */
+    /* background-color: blue; */
+    width: 30%;
+
+    display: flex;
+    align-items: center;
+    justify-content:flex-end;
+}
+#nav #nav-part2 button{
+    padding: 1vw 1.5vw;
+    font-size: 0.9vw;
+    font-weight: 500;
+    border-radius: 2vw;
+    border: transparent;
+    background-color: black;
+    color: white;
+    margin: 0 0.5vw;
+}
+#nav #nav-part2 button:nth-child(1){
+    background-color: transparent;
+    color: black;
+}
+#nav #nav-part2 button:hover{
+    cursor: pointer;
+}
+#nav img{
+    height: 4vw;
+}
+
+
+
+
+#content{
+    /*  */
+    /* background-color: cornflowerblue; */
+    height: 60%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#content h3{
+    width: fit-content;
+    padding: 0.6vw 1vw;
+    border-radius: 10vw;
+    background-color: #FFB5D1;
+    font-size: 1vw;
+
+    margin-top: 4vw;
+    margin-bottom: 2vw;
+}
+#content :hover{
+    cursor: pointer;
+}
+#content h1{
+    text-align: center;
+    font-size: 4.5vw;
+    line-height: 4.7vw;
+    font-weight: 500;
+
+    margin-bottom: 2vw;
+}
+#content h2{
+    text-align: center;
+    font-size: 1.2vw;
+    font-weight: 400;
+
+    margin-bottom: 2vw;
+}
+#content button{
+    padding: 1vw 1.5vw;
+    font-size: 0.9vw;
+    font-weight: 500;
+    border-radius: 2vw;
+    border: transparent;
+    background-color: black;
+    color: white;
+}
+#content button:hover{
+    cursor: pointer;
+}
+
+
+
+
+#scroll{
+    /*  */
+    /* background-color: aquamarine; */
+    height: 50vh;
+    width: 100%;
+    display: inline-block;
+    white-space: nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    margin-top: 4vw;
+}
+#scroll-img{
+    height: 100%;
+    width: 100%;
+    animation-name: anime;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+#scroll-img img{
+    /* display: none; */
+    height: 95%;
+    width: 18%;
+    border-radius: 2vw;
+    object-fit: cover;
+    object-position: 30% 30%;
+    margin: 1vw;
+}
+
+@keyframes anime {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+
+
+
+
+#explore-text{
+    /*  */
+    /* background-color: chartreuse; */
+    height: fit-content;
+    width: 100%;
+    text-align: center;
+
+    margin-top: 4vw;
+}
+#explore-text h1{
+    font-size: 3.5vw;
+    font-weight: 400;
+}
+
+
+
+
+
+#box-content{
+    width: 100%;
+    height: fit-content;
+
+    margin-top: 4vw;
+    padding: 0 4vw;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.box-elem{
+    /*  */
+    flex-shrink: 0;
+    background-color: red;
+    height: 15vw;
+    width: 20vw;
+    border-radius: 0.5vw;
+    margin: 1vw;
+
+    overflow: hidden;
+    position: relative;
+}
+.box-elem img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.box-elem img:hover{
+    cursor: pointer;
+}
+/* effect */
+.box-elem-bottom{
+    height: 40%;
+    width: 100%;
+    background:linear-gradient(transparent,rgba(0, 0, 0, 0.635));
+    position: absolute;
+    bottom: -40%;
+
+    transition: all ease 0.3s;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1vw;
+    color: white;
+}
+.box-elem-bottom i{
+    background-color: white;
+    color: black;
+    font-size: 1vw;
+    border-radius: 50%;
+    padding: 0.7vw;
+    font-weight: 600;
+}
+.box-elem-bottom h5{
+    font-size: 1.4vw;
+    font-weight: 600;
+}
+.box-elem:hover .box-elem-bottom{
+    bottom: 0;
+}
+
+
+
+
+
+#browse-button{
+    /*  */
+    /* background-color: chartreuse; */
+    height: fit-content;
+    width: 100%;
+    text-align: center;
+    margin-top: 2vw;
+}
+#browse-button button{
+    padding: 1vw 1.5vw;
+    font-size: 0.9vw;
+    font-weight: 600;
+    border-radius: 2vw;
+    border: transparent;
+    background-color: transparent;
+    border: 0.1vw solid black;
+    color: black;
+}
+#browse-button button:hover{
+    cursor: pointer;
+}
+
+
+
+
+#page{
+    background-color: #FFDA79;
+    height: 90%;
+    width: 100%;
+    margin-top: 8vw;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 8vw 0;
+}
+#page h1{
+    font-size: 4vw;
+    line-height: 4.2vw;
+    font-weight: 500;
+
+    margin-bottom: 2vw;
+}
+#page h4{
+    font-size: 1.3vw;
+    line-height: 2vw;
+    font-weight: 300;
+
+    margin-bottom: 2vw;
+}
+#page-btn{
+    margin-bottom: 2vw;
+}
+#page #page-btn #btn1{
+    padding: 1.2vw 1.5vw;
+    font-size: 0.9vw;
+    font-weight: 600;
+    border-radius: 2vw;
+    border: transparent;
+    background-color: black;
+    color: white;
+    margin-right: 1vw;
+}
+#page #page-btn #btn2{
+    padding: 1.2vw 1.5vw;
+    font-size: 0.9vw;
+    font-weight: 600;
+    border-radius: 2vw;
+    border: transparent;
+    background-color: white;
+    color: black;
+    margin-right: 1vw;
+}
+#btn1:hover{
+    cursor: pointer;
+}
+#btn2:hover{
+    cursor: pointer;
+}
+#page h4 span{
+    border-bottom: 0.1vw solid;
+}
+#page h4 span{
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+#scroll2{
+        /*  */
+    /* background-color: aquamarine; */
+    height: fit-content;
+    width: 100%;
+    display: inline-block;
+    white-space: nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    margin-top: 4vw;
+}
+#scroll2-img{
+    height: 100%;
+    width: 100%;
+    animation-name: anime2;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-play-state:unset;
+}
+.scroll2-img-div{
+    display: inline-block;
+}
+.scroll2-img-div img{
+    height: 12vw;
+    width: 15vw;
+    object-fit: cover;
+    margin: 0vw 1vw;
+    border-radius: 1vw;
+}
+.scroll2-img-div h5{
+    font-size: 1vw;
+    font-weight: 500;
+    margin-left: 1vw;
+}
+.scroll2-img-div:hover{
+    cursor: pointer;
+}
+@keyframes anime2 {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+
+
+
+
+
+
+#footer{
+    /*  */
+    /* background-color: aqua; */
+    height: 30vh;
+    width: 100%;
+
+    padding: 0 10vw;
+    margin-top: 4vw;
+}
+#footer-top{
+    /*  */
+    /* background-color: red; */
+    height: 50%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#footer-top img{
+    height: 4vw;
+}
+#footer-top img:hover{
+    cursor: pointer;
+}
+#footer-top-content{
+    /*  */
+    /* background-color: #FFB5D1; */
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+#footer-top-content h4{
+    font-size: 0.9vw;
+    font-weight: 500;
+}
+#footer-top-content h4:hover{
+    cursor: pointer;
+}
+#footer-top-icon{
+    /*  */
+    /* background-color: gold; */
+    width: 10%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#footer-top-icon i{
+    font-size: 1.2vw;
+}
+#footer-top-icon i:hover{
+    cursor: pointer;
+}
+#footer-bottom{
+    /*  */
+    /* background-color: blue; */
+    height: 50%;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#footer-bottom #first{
+    /*  */
+    /* background-color: aliceblue; */
+    
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#footer-bottom #first h5{
+    font-size: 1vw;
+    font-weight: 200;
+    color: rgb(92, 91, 91);
+}
+#footer-bottom #second{
+    /*  */
+    /* background-color: rgb(97, 161, 218); */
+
+    width: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#footer-bottom #second h5{
+    font-size: 1vw;
+    font-weight: 200;
+    color: rgb(92, 91, 91);
+}
+
+
+#ssb{
+    /* background-color: aqua; */
+    height: 1%;
+    width: 1%;
+}
